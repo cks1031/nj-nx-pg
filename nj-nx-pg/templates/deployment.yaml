@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argo-nj-deploy
+  name: argo-njnginx-deploy
   labels:
     app: argo-njnginx
 spec:
