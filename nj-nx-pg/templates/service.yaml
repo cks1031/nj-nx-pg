@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: k8s-njnginx-svc
+  name: argo-njnginx-svc
 spec:
   selector:
     app: argo-njnginx
