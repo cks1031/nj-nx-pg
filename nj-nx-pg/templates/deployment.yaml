@@ -56,7 +56,7 @@ spec:
               protocol: TCP
           env:
             - name: DB_HOST
-              value: k8s-postgre-svc
+              value: argo-postgre-svc
 ---
 apiVersion: apps/v1
 kind: Deployment
