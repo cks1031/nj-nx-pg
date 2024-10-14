@@ -1,0 +1,27 @@
+# Default values for nodejs, nginx, postgre.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  nodejs:
+    repository: nanakia1031/k8s-nodejs
+    tag: v2
+  nginx:
+    repository: nginx
+  postgre:
+    repository: postgres
+    tag: 13-alpine3.20
+
+service:
+  nodejs:
+    port: 3000
+    targetPort: 3000
+  nginx:
+    port: 80
+    targetPort: 80
+  postgre:
+    port: 5432
+    targetPort: 5432
+
