@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-nj-deploy
+  name: argo-nj-deploy
   labels:
-    app: k8s-njnginx
+    app: argo-njnginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: k8s-njnginx
+      app: argo-njnginx
   template:
     metadata:
-      name: k8s-njnginx
+      name: argo-njnginx
       labels:
-        app: k8s-njnginx
+        app: argo-njnginx
     spec:
       containers:
-        - name: k8s-njnginx
+        - name: argo-njnginx
           image: {{.Values.image.nginx.repository}}
           imagePullPolicy: IfNotPresent
           ports:
@@ -33,22 +33,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-nodejs-deploy
+  name: argo-nodejs-deploy
   labels:
-    app: k8s-nodejs
+    app: argo-nodejs
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: k8s-nodejs
+      app: argo-nodejs
   template:
     metadata:
-      name: k8s-nodejs
+      name: argo-nodejs
       labels:
-        app: k8s-nodejs
+        app: argo-nodejs
     spec:
       containers:
-        - name: k8s-nodejs
+        - name: argo-nodejs
           image: {{.Values.image.nodejs.repository}}:{{.Values.image.nodejs.tag}}
           imagePullPolicy: IfNotPresent
           ports:
